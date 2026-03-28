@@ -87,7 +87,7 @@ const CategorySidebar = ({
               selectedRating === r ? "font-bold" : ""
             }`}
           >
-            <StarRating rating={r} size="sm" />
+            <StarRating rating={r} />
             <span className="text-foreground">& Up</span>
           </button>
         ))}
