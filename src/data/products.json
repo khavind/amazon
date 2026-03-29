@@ -1,0 +1,1427 @@
+[
+  {
+    "id": "1",
+    "title": "Sony WF-1000XM5 Wireless Earbuds - Active Noise Cancellation",
+    "brand": "Sony",
+    "category": "Electronics",
+    "price": 18999,
+    "discountPercentage": 15,
+    "finalPrice": 16149,
+    "rating": 4.8,
+    "reviews": 2450,
+    "description": "Premium wireless earbuds with industry-leading noise cancellation, 8-hour battery life, and superior sound quality. Perfect for music lovers and professionals.",
+    "features": ["Active Noise Cancellation", "8-hour battery", "Multipoint connection", "Ambient mode", "IPX4 water-resistant"],
+    "images": [
+      "https://images.pexels.com/photos/3756985/pexels-photo-3756985.jpeg",
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "2",
+    "title": "Apple Watch Series 9 - 41mm Aluminum",
+    "brand": "Apple",
+    "category": "Electronics",
+    "price": 42999,
+    "discountPercentage": 10,
+    "finalPrice": 38699,
+    "rating": 4.7,
+    "reviews": 3210,
+    "description": "Advanced smartwatch with always-on display, health monitoring, and seamless iPhone integration. Track fitness and stay connected all day.",
+    "features": ["Retina display", "Always-on functionality", "Health monitoring", "Water-resistant", "Fast charging"],
+    "images": [
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg",
+      "https://images.pexels.com/photos/1136589/pexels-photo-1136589.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "3",
+    "title": "Dell XPS 13 Plus Laptop - Intel i7, 512GB SSD",
+    "brand": "Dell",
+    "category": "Electronics",
+    "price": 119999,
+    "discountPercentage": 12,
+    "finalPrice": 105599,
+    "rating": 4.6,
+    "reviews": 1840,
+    "description": "Ultra-thin laptop with cutting-edge Intel processor, stunning OLED display, and lightning-fast performance. Ideal for professionals and creators.",
+    "features": ["Intel Core i7", "16GB RAM", "512GB SSD", "OLED display", "All-day battery"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "4",
+    "title": "Canon EOS R6 Mark II - Professional Mirrorless Camera",
+    "brand": "Canon",
+    "category": "Electronics",
+    "price": 315000,
+    "discountPercentage": 8,
+    "finalPrice": 289800,
+    "rating": 4.9,
+    "reviews": 920,
+    "description": "Professional-grade mirrorless camera with 20MP sensor, 6K video capability, and advanced autofocus. Perfect for photographers and videographers.",
+    "features": ["20MP Full Frame", "6K video", "Advanced autofocus", "Weather-sealed body", "4K 60fps"],
+    "images": [
+      "https://images.pexels.com/photos/3878617/pexels-photo-3878617.jpeg",
+      "https://images.pexels.com/photos/31453948/pexels-photo-31453948.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "5",
+    "title": "JBL Flip 6 Portable Bluetooth Speaker",
+    "brand": "JBL",
+    "category": "Electronics",
+    "price": 9999,
+    "discountPercentage": 20,
+    "finalPrice": 7999,
+    "rating": 4.5,
+    "reviews": 2100,
+    "description": "Compact waterproof speaker with 360-degree sound, 12-hour battery, and rugged design. Great for outdoor adventures and travel.",
+    "features": ["360-degree sound", "12-hour battery", "IPX7 waterproof", "Compact design", "JBL PartyBoost"],
+    "images": [
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg",
+      "https://images.pexels.com/photos/3756985/pexels-photo-3756985.jpeg",
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "6",
+    "title": "Samsung Galaxy Buds2 Pro - Premium Earbuds",
+    "brand": "Samsung",
+    "category": "Electronics",
+    "price": 16999,
+    "discountPercentage": 18,
+    "finalPrice": 13939,
+    "rating": 4.6,
+    "reviews": 1950,
+    "description": "Premium earbuds with Intelligent Active Noise Cancellation and premium sound quality. Seamless Android integration.",
+    "features": ["ANC", "Hi-Fi sound", "IPX7 water-resistant", "24-bit audio", "SSC codec"],
+    "images": [
+      "https://images.pexels.com/photos/3756985/pexels-photo-3756985.jpeg",
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg",
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "7",
+    "title": "Premium Cotton T-Shirt - Modern Casual Wear",
+    "brand": "Levi's",
+    "category": "Fashion",
+    "price": 1499,
+    "discountPercentage": 30,
+    "finalPrice": 1049,
+    "rating": 4.4,
+    "reviews": 3450,
+    "description": "Classic cotton t-shirt with modern fit and premium quality. Comfortable for everyday wear with excellent durability.",
+    "features": ["100% organic cotton", "Modern fit", "Breathable", "Pre-shrunk", "Durable stitching"],
+    "images": [
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "8",
+    "title": "Running Sneakers - Professional Athletic Shoes",
+    "brand": "Nike",
+    "category": "Fashion",
+    "price": 8999,
+    "discountPercentage": 25,
+    "finalPrice": 6749,
+    "rating": 4.7,
+    "reviews": 2890,
+    "description": "Professional-grade running shoes with advanced cushioning technology and breathable mesh. Perfect for athletes and casual runners.",
+    "features": ["Air Max cushioning", "Breathable mesh", "Lightweight", "Non-slip sole", "Ergonomic support"],
+    "images": [
+      "https://images.pexels.com/photos/11135667/pexels-photo-11135667.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "9",
+    "title": "Classic Denim Jeans - Slim Fit",
+    "brand": "Wrangler",
+    "category": "Fashion",
+    "price": 3499,
+    "discountPercentage": 35,
+    "finalPrice": 2274,
+    "rating": 4.3,
+    "reviews": 2100,
+    "description": "Timeless denim jeans with premium fabric and comfortable slim fit. Versatile for any occasion.",
+    "features": ["100% cotton denim", "Slim fit", "Durable", "Classic style", "Multiple pockets"],
+    "images": [
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "10",
+    "title": "Hoodie Sweatshirt - Cozy Comfort",
+    "brand": "H&M",
+    "category": "Fashion",
+    "price": 2999,
+    "discountPercentage": 40,
+    "finalPrice": 1799,
+    "rating": 4.5,
+    "reviews": 1850,
+    "description": "Comfortable hoodie with soft fleece lining and modern design. Perfect for casual outings and lounging.",
+    "features": ["Soft fleece", "Kangaroo pocket", "Drawstring", "Comfortable fit", "Modern design"],
+    "images": [
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "11",
+    "title": "Premium Leather Handbag - Sophisticated Style",
+    "brand": "Coach",
+    "category": "Fashion",
+    "price": 15999,
+    "discountPercentage": 20,
+    "finalPrice": 12799,
+    "rating": 4.6,
+    "reviews": 1450,
+    "description": "Elegant leather handbag with sophisticated design and premium craftsmanship. Ideal for work and leisure.",
+    "features": ["Genuine leather", "Adjustable strap", "Multiple compartments", "Dust bag included", "Elegant design"],
+    "images": [
+      "https://images.pexels.com/photos/3808229/pexels-photo-3808229.jpeg",
+      "https://images.pexels.com/photos/31453948/pexels-photo-31453948.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "12",
+    "title": "Travel Backpack - Durable and Spacious",
+    "brand": "North Face",
+    "category": "Fashion",
+    "price": 6999,
+    "discountPercentage": 22,
+    "finalPrice": 5459,
+    "rating": 4.7,
+    "reviews": 2340,
+    "description": "Spacious travel backpack with multiple compartments and ergonomic design. Perfect for daily commute and travel.",
+    "features": ["30L capacity", "Water-resistant", "Laptop pocket", "Ergonomic straps", "Multiple compartments"],
+    "images": [
+      "https://images.pexels.com/photos/31453948/pexels-photo-31453948.jpeg",
+      "https://images.pexels.com/photos/3808229/pexels-photo-3808229.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "13",
+    "title": "Classic Wristwatch - Timeless Elegance",
+    "brand": "Fossil",
+    "category": "Fashion",
+    "price": 8999,
+    "discountPercentage": 25,
+    "finalPrice": 6749,
+    "rating": 4.4,
+    "reviews": 1680,
+    "description": "Classic analog watch with elegant design and premium quality. Suitable for any formal or casual occasion.",
+    "features": ["Quartz movement", "Water-resistant", "Stainless steel", "Comfortable strap", "Date window"],
+    "images": [
+      "https://images.pexels.com/photos/1136589/pexels-photo-1136589.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg",
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "14",
+    "title": "UV Protection Sunglasses - Stylish Summer Essential",
+    "brand": "Ray-Ban",
+    "category": "Fashion",
+    "price": 7999,
+    "discountPercentage": 15,
+    "finalPrice": 6799,
+    "rating": 4.6,
+    "reviews": 2450,
+    "description": "Premium sunglasses with 100% UV protection and timeless design. Essential for outdoor activities.",
+    "features": ["100% UV protection", "Polarized lens", "Durable frame", "Comfortable fit", "Anti-glare"],
+    "images": [
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg",
+      "https://images.pexels.com/photos/1136589/pexels-photo-1136589.jpeg",
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "15",
+    "title": "Premium Yoga Mat - Non-Slip Exercise Mat",
+    "brand": "Liforme",
+    "category": "Fitness",
+    "price": 3999,
+    "discountPercentage": 18,
+    "finalPrice": 3279,
+    "rating": 4.8,
+    "reviews": 2100,
+    "description": "Professional-grade yoga mat with superior grip and comfort. Perfect for yoga, pilates, and general fitness.",
+    "features": ["Non-slip surface", "6mm thickness", "Eco-friendly", "Portable", "Cushioned support"],
+    "images": [
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "16",
+    "title": "Adjustable Dumbbells Set - Home Gym Essential",
+    "brand": "Powerblocks",
+    "category": "Fitness",
+    "price": 24999,
+    "discountPercentage": 12,
+    "finalPrice": 21999,
+    "rating": 4.7,
+    "reviews": 1890,
+    "description": "Versatile adjustable dumbbells set for complete strength training at home. Easy to adjust and store.",
+    "features": ["5-30kg per dumbbell", "Quick adjustment", "Space-saving", "Durable steel", "Non-slip grip"],
+    "images": [
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "17",
+    "title": "Fitness Tracker Watch - Health Monitor",
+    "brand": "Fitbit",
+    "category": "Fitness",
+    "price": 9999,
+    "discountPercentage": 20,
+    "finalPrice": 7999,
+    "rating": 4.5,
+    "reviews": 2340,
+    "description": "Advanced fitness tracker with heart rate monitoring, sleep tracking, and daily activity goals. Perfect health companion.",
+    "features": ["Heart rate monitor", "Sleep tracking", "Water-resistant", "7-day battery", "Smartphone alerts"],
+    "images": [
+      "https://images.pexels.com/photos/31541678/pexels-photo-31541678.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "18",
+    "title": "Resistance Bands Set - Full Body Workout",
+    "brand": "TheraBand",
+    "category": "Fitness",
+    "price": 1999,
+    "discountPercentage": 35,
+    "finalPrice": 1299,
+    "rating": 4.4,
+    "reviews": 1560,
+    "description": "Complete set of resistance bands for full-body workouts. Portable and effective for muscle building and rehabilitation.",
+    "features": ["5 resistance levels", "Durable latex", "Portable", "Instruction guide", "Lightweight"],
+    "images": [
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "19",
+    "title": "Treadmill - Home Cardio Machine",
+    "brand": "NordicTrack",
+    "category": "Fitness",
+    "price": 54999,
+    "discountPercentage": 15,
+    "finalPrice": 46749,
+    "rating": 4.6,
+    "reviews": 980,
+    "description": "Advanced treadmill with interactive training programs and ergonomic design. Perfect for home cardio workouts.",
+    "features": ["3HP motor", "22 programs", "Interactive display", "Folding design", "Heart rate monitor"],
+    "images": [
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "20",
+    "title": "Kettlebell Weight - 16kg Premium Cast Iron",
+    "brand": "Rogue",
+    "category": "Fitness",
+    "price": 3499,
+    "discountPercentage": 10,
+    "finalPrice": 3149,
+    "rating": 4.7,
+    "reviews": 1340,
+    "description": "Professional-grade kettlebell for versatile strength and conditioning workouts. Durable cast iron construction.",
+    "features": ["16kg weight", "Cast iron", "Wide handle", "Flat bottom", "Durable finish"],
+    "images": [
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "21",
+    "title": "Espresso Coffee Machine - Automatic Brew",
+    "brand": "De'Longhi",
+    "category": "Home & Kitchen",
+    "price": 24999,
+    "discountPercentage": 16,
+    "finalPrice": 20999,
+    "rating": 4.6,
+    "reviews": 1230,
+    "description": "Premium automatic espresso machine with built-in grinder. Perfect for espresso lovers and daily use.",
+    "features": ["Automatic brewing", "Built-in grinder", "Adjustable temperature", "Milk frother", "Compact design"],
+    "images": [
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "22",
+    "title": "Non-Stick Cookware Set - 10 Pieces",
+    "brand": "T-Fal",
+    "category": "Home & Kitchen",
+    "price": 7999,
+    "discountPercentage": 28,
+    "finalPrice": 5759,
+    "rating": 4.5,
+    "reviews": 2100,
+    "description": "Complete non-stick cookware set with pans, pots, and lids. Perfect for healthy cooking and easy cleanup.",
+    "features": ["Non-stick coating", "Heat-resistant handles", "Oven-safe", "10-piece set", "Durable material"],
+    "images": [
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "23",
+    "title": "Stainless Steel Refrigerator - 650L Capacity",
+    "brand": "LG",
+    "category": "Home & Kitchen",
+    "price": 89999,
+    "discountPercentage": 20,
+    "finalPrice": 71999,
+    "rating": 4.7,
+    "reviews": 890,
+    "description": "Energy-efficient refrigerator with advanced cooling technology and spacious design. Perfect for large families.",
+    "features": ["650L capacity", "Inverter compressor", "Frost-free", "LED display", "Double door"],
+    "images": [
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "24",
+    "title": "Microwave Oven - 30L Convection",
+    "brand": "Samsung",
+    "category": "Home & Kitchen",
+    "price": 12999,
+    "discountPercentage": 18,
+    "finalPrice": 10659,
+    "rating": 4.4,
+    "reviews": 1450,
+    "description": "Convection microwave with multiple cooking modes and modern design. Great for reheating and cooking.",
+    "features": ["30L capacity", "Convection mode", "Multiple presets", "Stainless steel", "Efficient heating"],
+    "images": [
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "25",
+    "title": "Electric Kettle - 1.7L Stainless Steel",
+    "brand": "Philips",
+    "category": "Home & Kitchen",
+    "price": 2499,
+    "discountPercentage": 22,
+    "finalPrice": 1949,
+    "rating": 4.6,
+    "reviews": 2340,
+    "description": "Fast-boiling electric kettle with auto shut-off and temperature control. Perfect for tea and coffee lovers.",
+    "features": ["1.7L capacity", "Auto shut-off", "Temperature control", "Stainless steel", "Cordless design"],
+    "images": [
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "26",
+    "title": "Modern LED Desk Lamp - Adjustable Brightness",
+    "brand": "Philips Hue",
+    "category": "Home & Kitchen",
+    "price": 5999,
+    "discountPercentage": 15,
+    "finalPrice": 5099,
+    "rating": 4.7,
+    "reviews": 1890,
+    "description": "Smart LED desk lamp with adjustable brightness and color temperature. Perfect for work and study.",
+    "features": ["LED technology", "USB charging port", "Adjustable height", "Touch control", "Energy-efficient"],
+    "images": [
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "27",
+    "title": "Air Purifier - HEPA Filter Technology",
+    "brand": "Dyson",
+    "category": "Home & Kitchen",
+    "price": 34999,
+    "discountPercentage": 14,
+    "finalPrice": 30099,
+    "rating": 4.8,
+    "reviews": 1560,
+    "description": "Advanced air purifier with HEPA filter for clean air quality. Reduces pollutants and allergens effectively.",
+    "features": ["HEPA filter", "Quiet operation", "Smart display", "Auto mode", "Captures 99.97% particles"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "28",
+    "title": "Blender - 1500W Professional Smoothie Maker",
+    "brand": "Vitamix",
+    "category": "Home & Kitchen",
+    "price": 19999,
+    "discountPercentage": 10,
+    "finalPrice": 17999,
+    "rating": 4.8,
+    "reviews": 1340,
+    "description": "Powerful professional blender for smoothies, soups, and sauces. Durable and efficient for daily use.",
+    "features": ["1500W motor", "Variable speed", "10-year warranty", "Stainless steel", "Multiple containers"],
+    "images": [
+      "https://images.pexels.com/photos/32103303/pexels-photo-32103303.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "29",
+    "title": "The Midnight Library - Fiction Novel",
+    "brand": "Matt Haig",
+    "category": "Books",
+    "price": 499,
+    "discountPercentage": 40,
+    "finalPrice": 299,
+    "rating": 4.7,
+    "reviews": 5240,
+    "description": "Bestselling fiction novel about alternate lives and second chances. A captivating and inspiring read for all ages.",
+    "features": ["Hardcover", "384 pages", "International bestseller", "Award-winning", "Inspirational"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "30",
+    "title": "Atomic Habits - Self-Improvement Book",
+    "brand": "James Clear",
+    "category": "Books",
+    "price": 599,
+    "discountPercentage": 35,
+    "finalPrice": 389,
+    "rating": 4.8,
+    "reviews": 6890,
+    "description": "Transform your habits and build a better life. Practical strategies for creating lasting change and success.",
+    "features": ["Paperback", "320 pages", "Bestseller", "Evidence-based", "Practical techniques"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "31",
+    "title": "The Python Cookbook - Programming Guide",
+    "brand": "David Beazley",
+    "category": "Books",
+    "price": 1299,
+    "discountPercentage": 25,
+    "finalPrice": 974,
+    "rating": 4.6,
+    "reviews": 1230,
+    "description": "Comprehensive guide to Python programming with practical recipes and solutions. Essential for developers.",
+    "features": ["Hardcover", "656 pages", "Technical reference", "Code examples", "Professional"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "32",
+    "title": "Sapiens - Human History Book",
+    "brand": "Yuval Noah Harari",
+    "category": "Books",
+    "price": 749,
+    "discountPercentage": 30,
+    "finalPrice": 524,
+    "rating": 4.7,
+    "reviews": 3450,
+    "description": "Fascinating exploration of human history and society. A must-read for understanding our world.",
+    "features": ["Paperback", "496 pages", "Bestseller", "Thought-provoking", "Educational"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "33",
+    "title": "The Great Gatsby - Classic Literature",
+    "brand": "F. Scott Fitzgerald",
+    "category": "Books",
+    "price": 399,
+    "discountPercentage": 45,
+    "finalPrice": 219,
+    "rating": 4.5,
+    "reviews": 4120,
+    "description": "Classic American novel about love, wealth, and the American Dream. A timeless literary masterpiece.",
+    "features": ["Paperback", "180 pages", "Classic", "Literature", "Iconic"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "34",
+    "title": "Deep Work - Productivity Book",
+    "brand": "Cal Newport",
+    "category": "Books",
+    "price": 699,
+    "discountPercentage": 32,
+    "finalPrice": 475,
+    "rating": 4.6,
+    "reviews": 2890,
+    "description": "Master focused productivity and achieve excellence in your work. Practical strategies for deep concentration.",
+    "features": ["Hardcover", "296 pages", "Bestseller", "Productivity", "Professional development"],
+    "images": [
+      "https://images.pexels.com/photos/8207315/pexels-photo-8207315.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "35",
+    "title": "Advanced Skincare Serum - Vitamin C Formula",
+    "brand": "Dermalogica",
+    "category": "Beauty",
+    "price": 4999,
+    "discountPercentage": 12,
+    "finalPrice": 4399,
+    "rating": 4.7,
+    "reviews": 2340,
+    "description": "Premium skincare serum with vitamin C for brightening and anti-aging. Smooth and radiant skin guaranteed.",
+    "features": ["Vitamin C enriched", "Anti-aging", "Brightening", "Cruelty-free", "Dermatologist tested"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "36",
+    "title": "Moisturizing Face Cream - Hydration Boost",
+    "brand": "Cetaphil",
+    "category": "Beauty",
+    "price": 1499,
+    "discountPercentage": 20,
+    "finalPrice": 1199,
+    "rating": 4.6,
+    "reviews": 3120,
+    "description": "Lightweight moisturizer for daily hydration and skin nourishment. Suitable for all skin types.",
+    "features": ["Hyaluronic acid", "Light texture", "Non-greasy", "Fragrance-free", "Dermatologist recommended"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "37",
+    "title": "Facial Clay Mask - Deep Cleansing",
+    "brand": "Aztec Secret",
+    "category": "Beauty",
+    "price": 599,
+    "discountPercentage": 25,
+    "finalPrice": 449,
+    "rating": 4.5,
+    "reviews": 2560,
+    "description": "Powerful clay mask for deep pore cleansing and detoxification. Great for acne-prone and oily skin.",
+    "features": ["100% natural", "Detoxifying", "Deep cleansing", "Oil control", "No additives"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "38",
+    "title": "Eye Cream - Anti-Wrinkle Formula",
+    "brand": "Olay",
+    "category": "Beauty",
+    "price": 1999,
+    "discountPercentage": 18,
+    "finalPrice": 1639,
+    "rating": 4.4,
+    "reviews": 1890,
+    "description": "Specialized eye cream for reducing fine lines and dark circles. Delicate formula for sensitive eye area.",
+    "features": ["Anti-wrinkle", "Reduces dark circles", "Light absorbers", "Fast-absorbing", "Hypoallergenic"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "39",
+    "title": "Lip Balm - Nourishing Hydration",
+    "brand": "Carmex",
+    "category": "Beauty",
+    "price": 349,
+    "discountPercentage": 30,
+    "finalPrice": 244,
+    "rating": 4.6,
+    "reviews": 3450,
+    "description": "Long-lasting lip balm with SPF protection and moisturizing formula. Keep lips soft and healthy.",
+    "features": ["SPF 15", "Moisturizing", "Long-lasting", "Natural formula", "Portable"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "40",
+    "title": "Hair Shampoo - Volumizing Formula",
+    "brand": "Pantene",
+    "category": "Beauty",
+    "price": 249,
+    "discountPercentage": 35,
+    "finalPrice": 162,
+    "rating": 4.5,
+    "reviews": 4230,
+    "description": "Volumizing shampoo for thick and healthy hair. Gentle formula for daily use.",
+    "features": ["Volumizing", "Gentle formula", "Sulfate-free", "Pleasant scent", "Affordable"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "41",
+    "title": "Sunscreen SPF 50 - UV Protection",
+    "brand": "Neutrogena",
+    "category": "Beauty",
+    "price": 799,
+    "discountPercentage": 22,
+    "finalPrice": 623,
+    "rating": 4.7,
+    "reviews": 2890,
+    "description": "Broad-spectrum sunscreen for maximum UV protection. Water-resistant and lightweight formula.",
+    "features": ["SPF 50", "Water-resistant", "Non-greasy", "Lightweight", "Dermatologist tested"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "42",
+    "title": "Makeup Foundation - Long-lasting Formula",
+    "brand": "MAC",
+    "category": "Beauty",
+    "price": 2999,
+    "discountPercentage": 15,
+    "finalPrice": 2549,
+    "rating": 4.6,
+    "reviews": 2100,
+    "description": "Professional makeup foundation with flawless coverage and long-lasting wear. Suitable for all skin tones.",
+    "features": ["Full coverage", "Long-lasting", "Matte finish", "Professional quality", "Wide shade range"],
+    "images": [
+      "https://images.pexels.com/photos/24602077/pexels-photo-24602077.jpeg",
+      "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "43",
+    "title": "Wireless Charging Pad - Fast Charging",
+    "brand": "Belkin",
+    "category": "Electronics",
+    "price": 2999,
+    "discountPercentage": 20,
+    "finalPrice": 2399,
+    "rating": 4.5,
+    "reviews": 1560,
+    "description": "Fast wireless charging pad for smartphones and devices. Sleek design with non-slip surface.",
+    "features": ["15W fast charging", "Non-slip surface", "Compact design", "LED indicator", "Universal compatibility"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "44",
+    "title": "USB-C Hub - Multi-Port Adapter",
+    "brand": "Anker",
+    "category": "Electronics",
+    "price": 1999,
+    "discountPercentage": 28,
+    "finalPrice": 1439,
+    "rating": 4.6,
+    "reviews": 1890,
+    "description": "Versatile USB-C hub with multiple ports for seamless connectivity. Perfect for laptops and tablets.",
+    "features": ["7-in-1 hub", "Aluminum design", "Fast data transfer", "4K video output", "Compact"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "45",
+    "title": "Phone Protective Case - Military Grade",
+    "brand": "OtterBox",
+    "category": "Electronics",
+    "price": 1499,
+    "discountPercentage": 18,
+    "finalPrice": 1229,
+    "rating": 4.7,
+    "reviews": 2340,
+    "description": "Heavy-duty protective phone case with military-grade protection. Drop-tested and durability guaranteed.",
+    "features": ["Military-grade protection", "Drop-tested", "Slim design", "Multiple colors", "Lifetime warranty"],
+    "images": [
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "46",
+    "title": "Screen Protector - Tempered Glass",
+    "brand": "Spigen",
+    "category": "Electronics",
+    "price": 599,
+    "discountPercentage": 25,
+    "finalPrice": 449,
+    "rating": 4.6,
+    "reviews": 2890,
+    "description": "Premium tempered glass screen protector with crystal-clear clarity. Easy installation with alignment kit.",
+    "features": ["Tempered glass", "Crystal clear", "9H hardness", "Alignment kit", "Fingerprint resistant"],
+    "images": [
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "47",
+    "title": "Portable Power Bank - 30000mAh",
+    "brand": "Anker",
+    "category": "Electronics",
+    "price": 2999,
+    "discountPercentage": 20,
+    "finalPrice": 2399,
+    "rating": 4.7,
+    "reviews": 3120,
+    "description": "High-capacity power bank for long-lasting device charging. Dual ports for simultaneous charging.",
+    "features": ["30000mAh capacity", "Dual USB ports", "LED display", "Fast charging", "Compact size"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "48",
+    "title": "HDMI Cable - 4K Ultra HD",
+    "brand": "Belkin",
+    "category": "Electronics",
+    "price": 799,
+    "discountPercentage": 30,
+    "finalPrice": 559,
+    "rating": 4.4,
+    "reviews": 1340,
+    "description": "High-speed HDMI cable supporting 4K resolution and high refresh rates. Perfect for gaming and streaming.",
+    "features": ["4K support", "60fps", "Durable connectors", "Gold-plated", "10-year warranty"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "49",
+    "title": "Mechanical Keyboard - RGB Gaming",
+    "brand": "Corsair",
+    "category": "Electronics",
+    "price": 12999,
+    "discountPercentage": 16,
+    "finalPrice": 10919,
+    "rating": 4.7,
+    "reviews": 1680,
+    "description": "Professional gaming keyboard with mechanical switches and RGB lighting. Responsive and durable.",
+    "features": ["Mechanical switches", "RGB lighting", "Programmable keys", "Durable design", "Gaming optimized"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "50",
+    "title": "Gaming Mouse - Precision Sensor",
+    "brand": "Razer",
+    "category": "Electronics",
+    "price": 4999,
+    "discountPercentage": 14,
+    "finalPrice": 4299,
+    "rating": 4.6,
+    "reviews": 1450,
+    "description": "Lightweight gaming mouse with precision sensor and customizable buttons. Perfect for competitive gaming.",
+    "features": ["Precision sensor", "Lightweight", "Customizable buttons", "Ergonomic", "Low latency"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "51",
+    "title": "4K Webcam - Professional Streaming",
+    "brand": "Logitech",
+    "category": "Electronics",
+    "price": 14999,
+    "discountPercentage": 12,
+    "finalPrice": 13199,
+    "rating": 4.7,
+    "reviews": 1230,
+    "description": "Professional 4K webcam for streaming and video conferencing. Crystal-clear video quality and auto-focus.",
+    "features": ["4K resolution", "Auto-focus", "Built-in mic", "Wide angle lens", "USB plug-and-play"],
+    "images": [
+      "https://images.pexels.com/photos/3878617/pexels-photo-3878617.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "52",
+    "title": "Studio Microphone - USB Connection",
+    "brand": "Blue Yeti",
+    "category": "Electronics",
+    "price": 9999,
+    "discountPercentage": 18,
+    "finalPrice": 8199,
+    "rating": 4.6,
+    "reviews": 1890,
+    "description": "Professional studio microphone for podcasting and streaming. Crystal-clear audio capture with multiple modes.",
+    "features": ["USB connection", "Multiple modes", "Mute button", "Stand included", "Pro sound quality"],
+    "images": [
+      "https://images.pexels.com/photos/3878617/pexels-photo-3878617.jpeg",
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "53",
+    "title": "Monitor Light Bar - Eye Care",
+    "brand": "BenQ",
+    "category": "Electronics",
+    "price": 8999,
+    "discountPercentage": 15,
+    "finalPrice": 7649,
+    "rating": 4.5,
+    "reviews": 1560,
+    "description": "Monitor light bar for reducing eye strain during extended work. Flicker-free and natural lighting.",
+    "features": ["Eye-care technology", "Flicker-free", "Auto brightness", "USB powered", "Sleek design"],
+    "images": [
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "54",
+    "title": "Laptop Stand - Adjustable Aluminum",
+    "brand": "Twelve South",
+    "category": "Electronics",
+    "price": 3499,
+    "discountPercentage": 22,
+    "finalPrice": 2729,
+    "rating": 4.7,
+    "reviews": 2100,
+    "description": "Premium aluminum laptop stand for improved ergonomics and cooling. Adjustable for any height.",
+    "features": ["Aluminum construction", "Adjustable height", "Improves airflow", "Compact storage", "Stylish"],
+    "images": [
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "55",
+    "title": "Monitor Arm - Dual Desk Mount",
+    "brand": "Ergotron",
+    "category": "Electronics",
+    "price": 14999,
+    "discountPercentage": 10,
+    "finalPrice": 13499,
+    "rating": 4.8,
+    "reviews": 1340,
+    "description": "Heavy-duty monitor arm for dual displays with full articulation. Improves workspace organization.",
+    "features": ["Dual monitor support", "Full articulation", "Cable management", "Easy adjustment", "Professional"],
+    "images": [
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/7989741/pexels-photo-7989741.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "56",
+    "title": "Premium Denim Jacket - Casual Style",
+    "brand": "Levi's",
+    "category": "Fashion",
+    "price": 5999,
+    "discountPercentage": 28,
+    "finalPrice": 4319,
+    "rating": 4.5,
+    "reviews": 1680,
+    "description": "Classic denim jacket with premium fabric and timeless style. Versatile for any wardrobe.",
+    "features": ["100% cotton denim", "Classic design", "Multiple pockets", "Durable", "Comfortable fit"],
+    "images": [
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "57",
+    "title": "Athletic Leggings - High Waist",
+    "brand": "Lululemon",
+    "category": "Fashion",
+    "price": 7999,
+    "discountPercentage": 15,
+    "finalPrice": 6799,
+    "rating": 4.8,
+    "reviews": 2340,
+    "description": "Premium athletic leggings with high waist and buttery soft fabric. Perfect for workouts and casual wear.",
+    "features": ["High waist", "Butt-lifting design", "Moisture-wicking", "Seamless", "4-way stretch"],
+    "images": [
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "58",
+    "title": "Wool Beanie - Winter Essential",
+    "brand": "Patagonia",
+    "category": "Fashion",
+    "price": 1999,
+    "discountPercentage": 20,
+    "finalPrice": 1599,
+    "rating": 4.6,
+    "reviews": 1450,
+    "description": "Warm merino wool beanie for winter weather. Comfortable and stylish for outdoor activities.",
+    "features": ["Merino wool", "Soft material", "Warm", "Durable", "Multiple colors"],
+    "images": [
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "59",
+    "title": "Athletic Tank Top - Workout Wear",
+    "brand": "Under Armour",
+    "category": "Fashion",
+    "price": 1799,
+    "discountPercentage": 32,
+    "finalPrice": 1223,
+    "rating": 4.5,
+    "reviews": 1890,
+    "description": "Breathable athletic tank top with moisture-wicking technology. Perfect for intense workouts.",
+    "features": ["Moisture-wicking", "Breathable", "Lightweight", "Durable", "Comfortable fit"],
+    "images": [
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "60",
+    "title": "Wool Cardigan - Elegant Knitwear",
+    "brand": "Banana Republic",
+    "category": "Fashion",
+    "price": 8999,
+    "discountPercentage": 18,
+    "finalPrice": 7379,
+    "rating": 4.6,
+    "reviews": 1230,
+    "description": "Elegant wool cardigan for layering and warmth. Perfect for professional and casual settings.",
+    "features": ["100% wool", "Soft texture", "Button closure", "Professional look", "Comfortable"],
+    "images": [
+      "https://images.pexels.com/photos/4295985/pexels-photo-4295985.jpeg",
+      "https://images.pexels.com/photos/966067/pexels-photo-966067.jpeg",
+      "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "61",
+    "title": "Resistance Loop Bands - Set of 5",
+    "brand": "Fit Simplify",
+    "category": "Fitness",
+    "price": 1499,
+    "discountPercentage": 30,
+    "finalPrice": 1049,
+    "rating": 4.6,
+    "reviews": 2100,
+    "description": "Set of 5 resistance loop bands for strength training. Perfect for home workouts and physical therapy.",
+    "features": ["5 resistance levels", "Durable latex", "Instruction guide", "Portable", "Lightweight"],
+    "images": [
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "62",
+    "title": "Jump Rope - Adjustable Speed",
+    "brand": "Everlast",
+    "category": "Fitness",
+    "price": 999,
+    "discountPercentage": 28,
+    "finalPrice": 719,
+    "rating": 4.5,
+    "reviews": 1560,
+    "description": "Professional jump rope with ball bearings for speed training. Perfect for cardio workouts.",
+    "features": ["Adjustable length", "Ball bearing", "Speed training", "Durable", "Lightweight"],
+    "images": [
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "63",
+    "title": "Foam Roller - Muscle Recovery",
+    "brand": "TriggerPoint",
+    "category": "Fitness",
+    "price": 3999,
+    "discountPercentage": 16,
+    "finalPrice": 3359,
+    "rating": 4.7,
+    "reviews": 1340,
+    "description": "Professional foam roller for muscle recovery and massage therapy. Perfect for post-workout recovery.",
+    "features": ["EVA foam", "Durable", "Massage roller", "Muscle recovery", "Portable"],
+    "images": [
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "64",
+    "title": "Swimming Goggles - Anti-Fog",
+    "brand": "Speedo",
+    "category": "Fitness",
+    "price": 1299,
+    "discountPercentage": 22,
+    "finalPrice": 1013,
+    "rating": 4.4,
+    "reviews": 1680,
+    "description": "Professional swimming goggles with anti-fog coating. Perfect for competitive and recreational swimming.",
+    "features": ["Anti-fog", "UV protection", "Comfortable fit", "Durable", "Clear lenses"],
+    "images": [
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/32677227/pexels-photo-32677227.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "65",
+    "title": "Gym Bag - Large Duffle",
+    "brand": "Adidas",
+    "category": "Fitness",
+    "price": 3499,
+    "discountPercentage": 25,
+    "finalPrice": 2624,
+    "rating": 4.6,
+    "reviews": 1890,
+    "description": "Large gym duffle bag with multiple compartments and shoulder strap. Perfect for gym and travel.",
+    "features": ["Large capacity", "Durable material", "Wet compartment", "Shoulder strap", "Multiple pockets"],
+    "images": [
+      "https://images.pexels.com/photos/31453948/pexels-photo-31453948.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "66",
+    "title": "Protein Shaker Bottle - 750ml",
+    "brand": "BlenderBottle",
+    "category": "Fitness",
+    "price": 699,
+    "discountPercentage": 24,
+    "finalPrice": 531,
+    "rating": 4.7,
+    "reviews": 2340,
+    "description": "Durable shaker bottle with mixing ball for smooth protein shakes. Perfect for post-workout recovery.",
+    "features": ["750ml capacity", "Mixing ball", "Leak-proof", "BPA-free", "Dishwasher safe"],
+    "images": [
+      "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+      "https://images.pexels.com/photos/8436580/pexels-photo-8436580.jpeg",
+      "https://images.pexels.com/photos/11433027/pexels-photo-11433027.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "67",
+    "title": "Pillow - Memory Foam",
+    "brand": "Tempur",
+    "category": "Home & Kitchen",
+    "price": 8999,
+    "discountPercentage": 12,
+    "finalPrice": 7919,
+    "rating": 4.8,
+    "reviews": 2100,
+    "description": "Premium memory foam pillow for optimal neck support and comfort. Perfect for quality sleep.",
+    "features": ["Memory foam", "Neck support", "Hypoallergenic", "Cooling gel", "Durable cover"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "68",
+    "title": "Bed Sheet Set - Egyptian Cotton",
+    "brand": "Brooklinen",
+    "category": "Home & Kitchen",
+    "price": 9999,
+    "discountPercentage": 14,
+    "finalPrice": 8599,
+    "rating": 4.7,
+    "reviews": 1560,
+    "description": "Luxurious Egyptian cotton bed sheets with superior softness and durability. Perfect for quality sleep.",
+    "features": ["Egyptian cotton", "Soft texture", "Deep pockets", "Temperature control", "Easy care"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "69",
+    "title": "Decorative Throw Pillow - Modern Design",
+    "brand": "West Elm",
+    "category": "Home & Kitchen",
+    "price": 2499,
+    "discountPercentage": 20,
+    "finalPrice": 1999,
+    "rating": 4.5,
+    "reviews": 1340,
+    "description": "Modern decorative pillow for adding style to any room. Premium fabric and modern design.",
+    "features": ["Modern design", "Quality fabric", "Easy to clean", "Multiple colors", "Durable"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "70",
+    "title": "Area Rug - Wool Blend",
+    "brand": "Rugs USA",
+    "category": "Home & Kitchen",
+    "price": 14999,
+    "discountPercentage": 18,
+    "finalPrice": 12299,
+    "rating": 4.6,
+    "reviews": 1230,
+    "description": "Premium wool blend area rug for adding warmth to any space. Durable and stylish design.",
+    "features": ["Wool blend", "Durable", "Easy to clean", "Modern design", "Multiple sizes"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "71",
+    "title": "Table Lamp - Adjustable Arm",
+    "brand": "IKEA",
+    "category": "Home & Kitchen",
+    "price": 1999,
+    "discountPercentage": 25,
+    "finalPrice": 1499,
+    "rating": 4.5,
+    "reviews": 1890,
+    "description": "Adjustable table lamp with modern design and flexible arm. Perfect for desk and bedside lighting.",
+    "features": ["Adjustable arm", "Modern design", "Energy-efficient", "Easy assembly", "Stylish"],
+    "images": [
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "72",
+    "title": "Wall Art - Canvas Prints",
+    "brand": "Canvas Factory",
+    "category": "Home & Kitchen",
+    "price": 3999,
+    "discountPercentage": 30,
+    "finalPrice": 2799,
+    "rating": 4.4,
+    "reviews": 1560,
+    "description": "Beautiful canvas wall art prints for home decoration. Various designs and sizes available.",
+    "features": ["Canvas prints", "Multiple designs", "Easy installation", "Quality frames", "Various sizes"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "73",
+    "title": "Plant Pot - Ceramic Decorative",
+    "brand": "Ceramic Design",
+    "category": "Home & Kitchen",
+    "price": 1299,
+    "discountPercentage": 22,
+    "finalPrice": 1013,
+    "rating": 4.6,
+    "reviews": 1340,
+    "description": "Beautiful ceramic plant pot for indoor decoration. Perfect for plants and succulents.",
+    "features": ["Ceramic material", "Decorative design", "Drainage hole", "Various sizes", "Durable"],
+    "images": [
+      "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg",
+      "https://images.pexels.com/photos/36573009/pexels-photo-36573009.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "74",
+    "title": "Smart Home Speaker - Voice Control",
+    "brand": "Amazon Echo",
+    "category": "Electronics",
+    "price": 6999,
+    "discountPercentage": 20,
+    "finalPrice": 5599,
+    "rating": 4.6,
+    "reviews": 2890,
+    "description": "Smart home speaker with voice control and smart home integration. Perfect for modern living.",
+    "features": ["Voice control", "Smart home integration", "High-quality sound", "WiFi connected", "Compact"],
+    "images": [
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/31410610/pexels-photo-31410610.jpeg"
+    ],
+    "inStock": true
+  },
+  {
+    "id": "75",
+    "title": "Security Camera - Night Vision",
+    "brand": "Ring",
+    "category": "Electronics",
+    "price": 8999,
+    "discountPercentage": 15,
+    "finalPrice": 7649,
+    "rating": 4.7,
+    "reviews": 1680,
+    "description": "Smart security camera with night vision and motion detection. Monitor your home remotely.",
+    "features": ["Night vision", "Motion detection", "Remote access", "2-way audio", "Cloud storage"],
+    "images": [
+      "https://images.pexels.com/photos/3878617/pexels-photo-3878617.jpeg",
+      "https://images.pexels.com/photos/18311089/pexels-photo-18311089.jpeg",
+      "https://images.pexels.com/photos/2659939/pexels-photo-2659939.jpeg"
+    ],
+    "inStock": true
+  }
+]
