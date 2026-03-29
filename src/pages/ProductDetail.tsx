@@ -4,6 +4,7 @@ import { useCart } from "@/context/CartContext";
 import AmazonHeader from "@/components/AmazonHeader";
 import AmazonFooter from "@/components/AmazonFooter";
 import StarRating from "@/components/StarRating";
+import ProductCard from "@/components/ProductCard";
 import { useState } from "react";
 import { ChevronLeft, ChevronRight, ShieldCheck, Truck, RotateCcw } from "lucide-react";
 import { toast } from "sonner";
@@ -190,6 +191,28 @@ const ProductDetail = () => {
               </div>
             </div>
           </div>
+        </div>
+
+        {/* Related Products */}
+        <div className="mt-12 border-t border-border pt-8">
+          <h2 className="text-2xl font-bold text-foreground mb-4">Related Products</h2>
+          {(() => {
+            const relatedProducts = products
+              .filter((p) => p.category === product.category && p.id !== product.id)
+              .slice(0, 6);
+
+            if (relatedProducts.length === 0) {
+              return <p className="text-muted-foreground">No related products available.</p>;
+            }
+
+            return (
+              <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+                {relatedProducts.map((p) => (
+                  <ProductCard key={p.id} product={p} />
+                ))}
+              </div>
+            );
+          })()}
         </div>
       </div>
 
