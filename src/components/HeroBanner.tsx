@@ -38,7 +38,7 @@ const HeroBanner = () => {
             <img
               src={banner.src}
               alt={banner.alt}
-              className="w-full h-full object-fill"
+              className="w-full h-full object-cover"
               width={1560}
               height={400}
               {...(i === 0 ? {} : { loading: "lazy" as const })}
