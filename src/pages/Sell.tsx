@@ -123,50 +123,72 @@ const productCategories = [
   "Jewellery", "Baby Products", "Pet Supplies", "Other",
 ];
 
-// ─── Validation ───────────────────────────────────────────────────────────────
-function validateForm(data: SellerFormData): FormErrors {
-  const errors: FormErrors = {};
-  if (!data.businessName.trim()) errors.businessName = "Business name is required";
-  if (!data.gstin.trim()) {
-    errors.gstin = "GSTIN is required";
-  } else if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(data.gstin.toUpperCase())) {
-    errors.gstin = "Enter a valid 15-digit GSTIN (e.g. 27ABCDE1234F1Z5)";
+// ─── Per-field validators ─────────────────────────────────────────────────────
+function validateField(field: keyof SellerFormData, value: string | boolean): string {
+  switch (field) {
+    case "businessName":
+      return (value as string).trim() ? "" : "Business name is required";
+    case "gstin": {
+      const v = (value as string).trim().toUpperCase();
+      if (!v) return "GSTIN is required";
+      if (!/^[0-9]{2}[A-Z]{5}[0-9]{4}[A-Z]{1}[1-9A-Z]{1}Z[0-9A-Z]{1}$/.test(v))
+        return "Invalid GSTIN format (e.g. 27ABCDE1234F1Z5)";
+      return "";
+    }
+    case "panNumber": {
+      const v = (value as string).trim().toUpperCase();
+      if (!v) return "PAN number is required";
+      if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(v)) return "Invalid PAN format (e.g. ABCDE1234F)";
+      return "";
+    }
+    case "mobileNumber": {
+      const v = (value as string).trim();
+      if (!v) return "Mobile number is required";
+      if (!/^[6-9]\d{9}$/.test(v)) return "Enter a valid 10-digit Indian mobile number";
+      return "";
+    }
+    case "email": {
+      const v = (value as string).trim();
+      if (!v) return "Email is required";
+      if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(v)) return "Enter a valid email address";
+      return "";
+    }
+    case "accountHolderName":
+      return (value as string).trim() ? "" : "Account holder name is required";
+    case "bankAccount": {
+      const v = (value as string).trim();
+      if (!v) return "Bank account number is required";
+      if (!/^\d{9,18}$/.test(v)) return "Account number must be 9–18 digits (numbers only)";
+      return "";
+    }
+    case "ifscCode": {
+      const v = (value as string).trim().toUpperCase();
+      if (!v) return "IFSC code is required";
+      if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(v)) return "Invalid IFSC format (e.g. SBIN0001234)";
+      return "";
+    }
+    case "storeDisplayName":
+      return (value as string).trim() ? "" : "Store display name is required";
+    case "productCategory":
+      return (value as string) ? "" : "Please select a product category";
+    case "agreedToTerms":
+      return (value as boolean) ? "" : "You must agree to the terms and conditions";
+    default:
+      return "";
   }
-  if (!data.panNumber.trim()) {
-    errors.panNumber = "PAN number is required";
-  } else if (!/^[A-Z]{5}[0-9]{4}[A-Z]{1}$/.test(data.panNumber.toUpperCase())) {
-    errors.panNumber = "Enter a valid PAN (e.g. ABCDE1234F)";
-  }
-  if (!data.mobileNumber.trim()) {
-    errors.mobileNumber = "Mobile number is required";
-  } else if (!/^[6-9]\d{9}$/.test(data.mobileNumber)) {
-    errors.mobileNumber = "Enter a valid 10-digit Indian mobile number";
-  }
-  if (!data.email.trim()) {
-    errors.email = "Email is required";
-  } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(data.email)) {
-    errors.email = "Enter a valid email address";
-  }
-  if (!data.bankAccount.trim()) {
-    errors.bankAccount = "Bank account number is required";
-  } else if (data.bankAccount.length < 9 || data.bankAccount.length > 18) {
-    errors.bankAccount = "Account number must be 9–18 digits";
-  }
-  if (!data.ifscCode.trim()) {
-    errors.ifscCode = "IFSC code is required";
-  } else if (!/^[A-Z]{4}0[A-Z0-9]{6}$/.test(data.ifscCode.toUpperCase())) {
-    errors.ifscCode = "Enter a valid IFSC code (e.g. SBIN0001234)";
-  }
-  if (!data.accountHolderName.trim()) errors.accountHolderName = "Account holder name is required";
-  if (!data.storeDisplayName.trim()) errors.storeDisplayName = "Store display name is required";
-  if (!data.productCategory) errors.productCategory = "Please select a product category";
-  if (!data.agreedToTerms) errors.agreedToTerms = "You must agree to the terms and conditions";
-  return errors;
 }
+
+const STEP_FIELDS: Record<number, (keyof SellerFormData)[]> = {
+  1: ["businessName", "gstin", "panNumber", "mobileNumber", "email"],
+  2: ["accountHolderName", "bankAccount", "ifscCode"],
+  3: ["storeDisplayName", "productCategory", "agreedToTerms"],
+};
 
 // ─── Selling Registration Modal ───────────────────────────────────────────────
 function SellerRegistrationModal({ onClose, onSuccess }: { onClose: () => void; onSuccess: () => void }) {
-  const [step, setStep] = useState(1);
+  const [step, setStep] = useState<1 | 2 | 3>(1);
+  // Track which steps have been completed (passed validation)
+  const [completedSteps, setCompletedSteps] = useState<Set<number>>(new Set());
   const [form, setForm] = useState<SellerFormData>({
     businessName: "",
     gstin: "",
@@ -181,195 +203,419 @@ function SellerRegistrationModal({ onClose, onSuccess }: { onClose: () => void; 
     agreedToTerms: false,
   });
   const [errors, setErrors] = useState<FormErrors>({});
+  const [touched, setTouched] = useState<Set<string>>(new Set());
   const [loading, setLoading] = useState(false);
 
+  // Update field value and clear its error immediately
   const update = (field: keyof SellerFormData, value: string | boolean) => {
     setForm((prev) => ({ ...prev, [field]: value }));
-    if (errors[field]) setErrors((prev) => { const e = { ...prev }; delete e[field]; return e; });
+    // Re-validate only if already touched
+    if (touched.has(field)) {
+      const err = validateField(field, value);
+      setErrors((prev) => ({ ...prev, [field]: err }));
+    }
   };
 
-  const validateStep = () => {
-    const allErrors = validateForm(form);
-    const stepFields: Record<number, (keyof SellerFormData)[]> = {
-      1: ["businessName", "gstin", "panNumber", "mobileNumber", "email"],
-      2: ["bankAccount", "ifscCode", "accountHolderName"],
-      3: ["storeDisplayName", "productCategory", "agreedToTerms"],
-    };
-    const currentFields = stepFields[step];
-    const stepErrors: FormErrors = {};
-    currentFields.forEach((f) => { if (allErrors[f]) stepErrors[f] = allErrors[f]; });
-    setErrors(stepErrors);
-    return Object.keys(stepErrors).length === 0;
+  // Validate a single field on blur
+  const handleBlur = (field: keyof SellerFormData) => {
+    setTouched((prev) => new Set(prev).add(field));
+    const err = validateField(field, form[field]);
+    setErrors((prev) => ({ ...prev, [field]: err }));
   };
 
-  const next = () => { if (validateStep()) setStep((s) => s + 1); };
-  const back = () => setStep((s) => s - 1);
+  // Validate all fields for the current step; returns true if clean
+  const validateCurrentStep = (): boolean => {
+    const fields = STEP_FIELDS[step];
+    const newErrors: FormErrors = {};
+    const newTouched = new Set(touched);
+    fields.forEach((f) => {
+      newTouched.add(f);
+      const err = validateField(f, form[f]);
+      if (err) newErrors[f] = err;
+    });
+    setTouched(newTouched);
+    setErrors((prev) => ({ ...prev, ...newErrors }));
+    return Object.keys(newErrors).length === 0;
+  };
+
+  const goToStep = (target: 1 | 2 | 3) => {
+    // Allow going back freely; going forward requires passing current step validation
+    if (target < step) {
+      setStep(target);
+      return;
+    }
+    // Validate each intermediate step up to target
+    for (let s = step; s < target; s++) {
+      const fields = STEP_FIELDS[s];
+      const newErrors: FormErrors = {};
+      const newTouched = new Set(touched);
+      fields.forEach((f) => {
+        newTouched.add(f);
+        const err = validateField(f, form[f]);
+        if (err) newErrors[f] = err;
+      });
+      setTouched(newTouched);
+      if (Object.keys(newErrors).length > 0) {
+        setErrors((prev) => ({ ...prev, ...newErrors }));
+        setStep(s as 1 | 2 | 3);
+        return;
+      }
+      setCompletedSteps((prev) => new Set(prev).add(s));
+    }
+    setStep(target);
+  };
+
+  const next = () => {
+    if (validateCurrentStep()) {
+      setCompletedSteps((prev) => new Set(prev).add(step));
+      setStep((s) => (s < 3 ? ((s + 1) as 1 | 2 | 3) : s));
+    }
+  };
+
+  const back = () => setStep((s) => (s > 1 ? ((s - 1) as 1 | 2 | 3) : s));
 
   const handleSubmit = async () => {
-    if (!validateStep()) return;
+    if (!validateCurrentStep()) return;
     setLoading(true);
-    // Simulate API call
     await new Promise((r) => setTimeout(r, 1500));
     setLoading(false);
     onSuccess();
   };
 
   const inputCls = (field: string) =>
-    `w-full border rounded px-3 py-2 text-sm outline-none transition-colors ${
-      errors[field] ? "border-red-500 bg-red-50" : "border-gray-300 focus:border-[#e77600] focus:ring-1 focus:ring-[#e77600]"
+    `w-full border rounded-md px-3 py-2.5 text-sm outline-none transition-all ${
+      errors[field] && touched.has(field)
+        ? "border-red-400 bg-red-50 focus:border-red-500 focus:ring-1 focus:ring-red-300"
+        : "border-gray-300 bg-white focus:border-[#FF9900] focus:ring-2 focus:ring-[#FF9900]/20"
     }`;
 
+  const tabs = [
+    { num: 1 as const, label: "Business Info" },
+    { num: 2 as const, label: "Bank Details" },
+    { num: 3 as const, label: "Store Setup" },
+  ];
+
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4">
-      <div className="bg-white rounded-lg shadow-2xl w-full max-w-lg max-h-[90vh] overflow-y-auto">
-        {/* Header */}
-        <div className="bg-[#131921] text-white px-6 py-4 flex items-center justify-between rounded-t-lg">
+    <div
+      className="fixed inset-0 z-50 flex items-center justify-center bg-black/60 p-4"
+      onClick={(e) => e.target === e.currentTarget && onClose()}
+    >
+      <div className="bg-white rounded-lg shadow-2xl w-full max-w-lg flex flex-col" style={{ maxHeight: "92vh" }}>
+
+        {/* ── Modal Header ── */}
+        <div className="bg-[#131921] text-white px-6 py-4 flex items-center justify-between rounded-t-lg flex-shrink-0">
           <div>
-            <h2 className="text-lg font-bold">Seller Registration</h2>
-            <p className="text-xs text-gray-300">Step {step} of 3</p>
+            <h2 className="text-lg font-bold tracking-tight">Seller Registration</h2>
+            <p className="text-xs text-gray-400 mt-0.5">Step {step} of 3</p>
           </div>
-          <button onClick={onClose} className="text-gray-400 hover:text-white text-xl leading-none">✕</button>
+          <button
+            onClick={onClose}
+            className="w-8 h-8 flex items-center justify-center rounded-full text-gray-400 hover:text-white hover:bg-white/10 transition-colors text-lg"
+            aria-label="Close"
+          >
+            ✕
+          </button>
         </div>
 
-        {/* Progress bar */}
-        <div className="flex bg-gray-100">
-          {["Business Info", "Bank Details", "Store Setup"].map((label, i) => (
-            <div key={i} className={`flex-1 text-center py-2 text-xs font-medium border-b-2 transition-colors ${
-              step === i + 1 ? "border-[#e77600] text-[#e77600]" : step > i + 1 ? "border-green-500 text-green-600" : "border-transparent text-gray-400"
-            }`}>
-              {step > i + 1 ? "✓ " : `${i + 1}. `}{label}
-            </div>
-          ))}
+        {/* ── Tab Navigation ── */}
+        <div className="flex border-b border-gray-200 flex-shrink-0 bg-gray-50">
+          {tabs.map(({ num, label }) => {
+            const isDone = completedSteps.has(num);
+            const isActive = step === num;
+            return (
+              <button
+                key={num}
+                type="button"
+                onClick={() => goToStep(num)}
+                className={`flex-1 py-3 text-xs font-semibold transition-all border-b-2 flex items-center justify-center gap-1.5 ${
+                  isActive
+                    ? "border-[#FF9900] text-[#FF9900] bg-white"
+                    : isDone
+                    ? "border-green-500 text-green-600 hover:bg-green-50"
+                    : "border-transparent text-gray-400 hover:text-gray-600 hover:bg-gray-100"
+                }`}
+              >
+                <span
+                  className={`w-5 h-5 rounded-full text-[10px] flex items-center justify-center font-bold flex-shrink-0 ${
+                    isActive ? "bg-[#FF9900] text-white" : isDone ? "bg-green-500 text-white" : "bg-gray-200 text-gray-500"
+                  }`}
+                >
+                  {isDone && !isActive ? "✓" : num}
+                </span>
+                {label}
+              </button>
+            );
+          })}
         </div>
 
-        <div className="p-6 space-y-4">
-          {/* Step 1: Business Info */}
+        {/* ── Scrollable Form Body ── */}
+        <div className="overflow-y-auto flex-1 px-6 py-5 space-y-4">
+
+          {/* ── Step 1: Business Info ── */}
           {step === 1 && (
             <>
-              <p className="text-sm text-gray-500 mb-2">Enter your business & contact details</p>
-              {[
-                { field: "businessName", label: "Legal Business Name", placeholder: "As per GST registration", type: "text" },
-                { field: "gstin", label: "GSTIN", placeholder: "e.g. 27ABCDE1234F1Z5", type: "text" },
-                { field: "panNumber", label: "PAN Number", placeholder: "e.g. ABCDE1234F", type: "text" },
-                { field: "mobileNumber", label: "Mobile Number", placeholder: "10-digit mobile number", type: "tel" },
-                { field: "email", label: "Email Address", placeholder: "your@email.com", type: "email" },
-              ].map(({ field, label, placeholder, type }) => (
-                <div key={field}>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">{label} *</label>
-                  <input
-                    type={type}
-                    value={form[field as keyof SellerFormData] as string}
-                    onChange={(e) => update(field as keyof SellerFormData, field === "gstin" || field === "panNumber" || field === "ifscCode" ? e.target.value.toUpperCase() : e.target.value)}
-                    placeholder={placeholder}
-                    className={inputCls(field)}
-                  />
-                  {errors[field] && <p className="text-xs text-red-500 mt-1">{errors[field]}</p>}
-                </div>
-              ))}
-            </>
-          )}
+              <p className="text-sm text-gray-500">Enter your business &amp; contact details</p>
 
-          {/* Step 2: Bank Details */}
-          {step === 2 && (
-            <>
-              <p className="text-sm text-gray-500 mb-2">Your earnings will be deposited here every 7 days</p>
-              {[
-                { field: "accountHolderName", label: "Account Holder Name", placeholder: "As per bank records", type: "text" },
-                { field: "bankAccount", label: "Bank Account Number", placeholder: "9–18 digit account number", type: "text" },
-                { field: "ifscCode", label: "IFSC Code", placeholder: "e.g. SBIN0001234", type: "text" },
-              ].map(({ field, label, placeholder, type }) => (
-                <div key={field}>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">{label} *</label>
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Legal Business Name *</label>
+                <input
+                  type="text"
+                  value={form.businessName}
+                  onChange={(e) => update("businessName", e.target.value)}
+                  onBlur={() => handleBlur("businessName")}
+                  placeholder="As per GST registration"
+                  className={inputCls("businessName")}
+                />
+                {errors.businessName && touched.has("businessName") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.businessName}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">GSTIN *</label>
+                <input
+                  type="text"
+                  value={form.gstin}
+                  onChange={(e) => update("gstin", e.target.value.toUpperCase())}
+                  onBlur={() => handleBlur("gstin")}
+                  placeholder="e.g. 27ABCDE1234F1Z5"
+                  maxLength={15}
+                  className={inputCls("gstin")}
+                />
+                {errors.gstin && touched.has("gstin") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.gstin}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">PAN Number *</label>
+                <input
+                  type="text"
+                  value={form.panNumber}
+                  onChange={(e) => update("panNumber", e.target.value.toUpperCase())}
+                  onBlur={() => handleBlur("panNumber")}
+                  placeholder="e.g. ABCDE1234F"
+                  maxLength={10}
+                  className={inputCls("panNumber")}
+                />
+                {errors.panNumber && touched.has("panNumber") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.panNumber}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Mobile Number *</label>
+                <div className="flex gap-2">
+                  <span className="flex items-center px-3 bg-gray-100 border border-gray-300 rounded-md text-sm text-gray-600 flex-shrink-0">+91</span>
                   <input
-                    type={type}
-                    value={form[field as keyof SellerFormData] as string}
-                    onChange={(e) => update(field as keyof SellerFormData, field === "ifscCode" ? e.target.value.toUpperCase() : e.target.value)}
-                    placeholder={placeholder}
-                    className={inputCls(field)}
+                    type="tel"
+                    value={form.mobileNumber}
+                    onChange={(e) => update("mobileNumber", e.target.value.replace(/\D/g, "").slice(0, 10))}
+                    onBlur={() => handleBlur("mobileNumber")}
+                    placeholder="10-digit mobile number"
+                    maxLength={10}
+                    className={inputCls("mobileNumber")}
                   />
-                  {errors[field] && <p className="text-xs text-red-500 mt-1">{errors[field]}</p>}
                 </div>
-              ))}
-              <div className="bg-blue-50 border border-blue-200 rounded p-3 text-xs text-blue-700">
-                🔒 Your bank details are encrypted and stored securely. ShopSpark never shares your financial information.
+                {errors.mobileNumber && touched.has("mobileNumber") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.mobileNumber}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Email Address *</label>
+                <input
+                  type="email"
+                  value={form.email}
+                  onChange={(e) => update("email", e.target.value)}
+                  onBlur={() => handleBlur("email")}
+                  placeholder="your@email.com"
+                  className={inputCls("email")}
+                />
+                {errors.email && touched.has("email") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.email}</p>
+                )}
               </div>
             </>
           )}
 
-          {/* Step 3: Store Setup */}
+          {/* ── Step 2: Bank Details ── */}
+          {step === 2 && (
+            <>
+              <p className="text-sm text-gray-500">Your earnings will be deposited here every 7 days</p>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Account Holder Name *</label>
+                <input
+                  type="text"
+                  value={form.accountHolderName}
+                  onChange={(e) => update("accountHolderName", e.target.value)}
+                  onBlur={() => handleBlur("accountHolderName")}
+                  placeholder="As per bank records"
+                  className={inputCls("accountHolderName")}
+                />
+                {errors.accountHolderName && touched.has("accountHolderName") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.accountHolderName}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">Bank Account Number *</label>
+                <input
+                  type="text"
+                  value={form.bankAccount}
+                  onChange={(e) => update("bankAccount", e.target.value.replace(/\D/g, "").slice(0, 18))}
+                  onBlur={() => handleBlur("bankAccount")}
+                  placeholder="9–18 digit account number"
+                  className={inputCls("bankAccount")}
+                />
+                {errors.bankAccount && touched.has("bankAccount") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.bankAccount}</p>
+                )}
+              </div>
+
+              <div>
+                <label className="block text-sm font-medium text-gray-700 mb-1">IFSC Code *</label>
+                <input
+                  type="text"
+                  value={form.ifscCode}
+                  onChange={(e) => update("ifscCode", e.target.value.toUpperCase())}
+                  onBlur={() => handleBlur("ifscCode")}
+                  placeholder="e.g. SBIN0001234"
+                  maxLength={11}
+                  className={inputCls("ifscCode")}
+                />
+                {errors.ifscCode && touched.has("ifscCode") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.ifscCode}</p>
+                )}
+              </div>
+
+              <div className="bg-blue-50 border border-blue-200 rounded-md p-3 text-xs text-blue-700 flex gap-2">
+                <span>🔒</span>
+                <span>Your bank details are encrypted and stored securely. ShopSpark never shares your financial information.</span>
+              </div>
+            </>
+          )}
+
+          {/* ── Step 3: Store Setup ── */}
           {step === 3 && (
             <>
-              <p className="text-sm text-gray-500 mb-2">Set up your store profile</p>
+              <p className="text-sm text-gray-500">Set up your public store profile</p>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Store Display Name *</label>
                 <input
                   type="text"
                   value={form.storeDisplayName}
                   onChange={(e) => update("storeDisplayName", e.target.value)}
+                  onBlur={() => handleBlur("storeDisplayName")}
                   placeholder="e.g. Rahul's Electronics Store"
                   className={inputCls("storeDisplayName")}
                 />
-                {errors.storeDisplayName && <p className="text-xs text-red-500 mt-1">{errors.storeDisplayName}</p>}
+                {errors.storeDisplayName && touched.has("storeDisplayName") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.storeDisplayName}</p>
+                )}
               </div>
+
               <div>
                 <label className="block text-sm font-medium text-gray-700 mb-1">Primary Product Category *</label>
                 <select
                   value={form.productCategory}
                   onChange={(e) => update("productCategory", e.target.value)}
+                  onBlur={() => handleBlur("productCategory")}
                   className={inputCls("productCategory")}
                 >
-                  <option value="">Select a category</option>
-                  {productCategories.map((c) => <option key={c} value={c}>{c}</option>)}
+                  <option value="">— Select a category —</option>
+                  {productCategories.map((c) => (
+                    <option key={c} value={c}>{c}</option>
+                  ))}
                 </select>
-                {errors.productCategory && <p className="text-xs text-red-500 mt-1">{errors.productCategory}</p>}
+                {errors.productCategory && touched.has("productCategory") && (
+                  <p className="text-xs text-red-500 mt-1">⚠ {errors.productCategory}</p>
+                )}
               </div>
 
-              {/* Summary */}
-              <div className="bg-gray-50 rounded-lg p-4 text-sm space-y-1 border">
-                <p className="font-semibold text-gray-700 mb-2">📋 Registration Summary</p>
-                <p><span className="text-gray-500">Business:</span> <span className="font-medium">{form.businessName || "—"}</span></p>
-                <p><span className="text-gray-500">GSTIN:</span> <span className="font-medium">{form.gstin || "—"}</span></p>
-                <p><span className="text-gray-500">Email:</span> <span className="font-medium">{form.email || "—"}</span></p>
-                <p><span className="text-gray-500">Mobile:</span> <span className="font-medium">{form.mobileNumber || "—"}</span></p>
+              {/* Summary card */}
+              <div className="bg-gray-50 rounded-lg p-4 border border-gray-200 text-sm space-y-2">
+                <p className="font-semibold text-gray-700">📋 Registration Summary</p>
+                {[
+                  ["Business", form.businessName],
+                  ["GSTIN", form.gstin],
+                  ["Email", form.email],
+                  ["Mobile", form.mobileNumber ? `+91 ${form.mobileNumber}` : ""],
+                  ["Account Holder", form.accountHolderName],
+                  ["IFSC", form.ifscCode],
+                ].map(([label, val]) => (
+                  <div key={label} className="flex gap-2">
+                    <span className="text-gray-400 w-28 flex-shrink-0">{label}:</span>
+                    <span className="font-medium text-gray-800 break-all">{val || "—"}</span>
+                  </div>
+                ))}
               </div>
 
-              <label className="flex items-start gap-2 cursor-pointer">
+              <label className="flex items-start gap-3 cursor-pointer group">
                 <input
                   type="checkbox"
                   checked={form.agreedToTerms}
-                  onChange={(e) => update("agreedToTerms", e.target.checked)}
-                  className="mt-0.5"
+                  onChange={(e) => {
+                    update("agreedToTerms", e.target.checked);
+                    handleBlur("agreedToTerms");
+                  }}
+                  className="mt-0.5 w-4 h-4 accent-[#FF9900]"
                 />
-                <span className="text-xs text-gray-600">
+                <span className="text-xs text-gray-600 leading-relaxed">
                   I agree to ShopSpark's{" "}
-                  <a href="#" className="text-[#007185] hover:underline">Seller Services Agreement</a>,{" "}
-                  <a href="#" className="text-[#007185] hover:underline">Privacy Policy</a>, and confirm all information provided is accurate.
+                  <a href="#" className="text-[#007185] hover:underline" onClick={(e) => e.preventDefault()}>
+                    Seller Services Agreement
+                  </a>
+                  ,{" "}
+                  <a href="#" className="text-[#007185] hover:underline" onClick={(e) => e.preventDefault()}>
+                    Privacy Policy
+                  </a>
+                  , and confirm all information provided is accurate.
                 </span>
               </label>
-              {errors.agreedToTerms && <p className="text-xs text-red-500">{errors.agreedToTerms}</p>}
+              {errors.agreedToTerms && touched.has("agreedToTerms") && (
+                <p className="text-xs text-red-500">⚠ {errors.agreedToTerms}</p>
+              )}
             </>
           )}
         </div>
 
-        {/* Footer buttons */}
-        <div className="px-6 pb-6 flex gap-3">
+        {/* ── Footer Buttons ── */}
+        <div className="px-6 py-4 border-t border-gray-100 flex gap-3 flex-shrink-0 bg-white rounded-b-lg">
           {step > 1 && (
-            <button onClick={back} className="flex-1 border border-gray-300 text-gray-700 py-2 rounded text-sm font-medium hover:bg-gray-50 transition-colors">
+            <button
+              type="button"
+              onClick={back}
+              className="flex-1 border border-gray-300 text-gray-700 py-2.5 rounded-md text-sm font-medium hover:bg-gray-50 transition-colors"
+            >
               ← Back
             </button>
           )}
           {step < 3 ? (
-            <button onClick={next} className="flex-1 bg-[#FFD814] hover:bg-[#F7CA00] text-[#0F1111] py-2 rounded text-sm font-bold transition-colors">
+            <button
+              type="button"
+              onClick={next}
+              className="flex-1 bg-[#FFD814] hover:bg-[#F7CA00] active:bg-[#e8ba00] text-[#0F1111] py-2.5 rounded-md text-sm font-bold transition-colors shadow-sm"
+            >
               Continue →
             </button>
           ) : (
             <button
+              type="button"
               onClick={handleSubmit}
               disabled={loading}
-              className="flex-1 bg-[#FF9900] hover:bg-[#e88a00] text-white py-2 rounded text-sm font-bold transition-colors disabled:opacity-60 flex items-center justify-center gap-2"
+              className="flex-1 bg-[#FF9900] hover:bg-[#e88a00] active:bg-[#d47e00] text-white py-2.5 rounded-md text-sm font-bold transition-colors disabled:opacity-60 flex items-center justify-center gap-2 shadow-sm"
             >
               {loading ? (
-                <><span className="animate-spin">⟳</span> Registering...</>
+                <>
+                  <svg className="animate-spin w-4 h-4" viewBox="0 0 24 24" fill="none">
+                    <circle className="opacity-25" cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="4" />
+                    <path className="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8z" />
+                  </svg>
+                  Registering...
+                </>
               ) : (
                 "🎉 Complete Registration"
               )}
