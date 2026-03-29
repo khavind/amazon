@@ -3,6 +3,7 @@ import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "@/context/CartContext";
 import { useState } from "react";
 import amazonLogo from "@/assets/amazon-logo.png";
+import SideMenu from "./SideMenu";
 
 const subNavItems = [
   "Fresh", "MX Player", "Sell", "Bestsellers", "Mobiles", "Today's Deals",
@@ -15,6 +16,7 @@ const AmazonHeader = () => {
   const { getCartCount } = useCart();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
+  const [sideMenuOpen, setSideMenuOpen] = useState(false);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
@@ -88,13 +90,13 @@ const AmazonHeader = () => {
 
       {/* Sub Nav */}
       <div className="bg-amazon-navy-light px-2 py-0.5 flex items-center gap-0 overflow-x-auto text-secondary-foreground text-sm">
-        <Link
-          to="/"
+        <button
+          onClick={() => setSideMenuOpen(true)}
           className="flex items-center gap-1 whitespace-nowrap px-2 py-1 border border-transparent hover:border-secondary-foreground/50 rounded font-bold"
         >
           <Menu size={18} />
           <span>All</span>
-        </Link>
+        </button>
         {subNavItems.map((item) => (
           <Link
             key={item}
@@ -105,6 +107,7 @@ const AmazonHeader = () => {
           </Link>
         ))}
       </div>
+      <SideMenu open={sideMenuOpen} onClose={() => setSideMenuOpen(false)} />
     </header>
   );
 };
