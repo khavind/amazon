@@ -1,0 +1,52 @@
+[
+  {
+    "id": "1",
+    "title": "Mega Sale - 50% Off",
+    "category": "Sale",
+    "imageUrl": "https://images.pexels.com/photos/7986992/pexels-photo-7986992.jpeg",
+    "altText": "Black sale tag on red background highlighting 50% discount",
+    "description": "Limited time mega sale with up to 50% discount on selected items across all categories",
+    "ctaText": "Shop Sale",
+    "ctaLink": "/sale"
+  },
+  {
+    "id": "2",
+    "title": "Fashion Forward - New Collection",
+    "category": "Fashion",
+    "imageUrl": "https://images.pexels.com/photos/5869617/pexels-photo-5869617.jpeg",
+    "altText": "Man holding a sale poster advertising 20% off dresses for fashion promotion",
+    "description": "Explore the latest fashion trends with our new collection of premium clothing and accessories",
+    "ctaText": "View Fashion",
+    "ctaLink": "/category/fashion"
+  },
+  {
+    "id": "3",
+    "title": "Home & Living - Transform Your Space",
+    "category": "Home & Kitchen",
+    "imageUrl": "https://images.pexels.com/photos/8996054/pexels-photo-8996054.jpeg",
+    "altText": "Elegant bedroom decor with modern furnishings and interior design",
+    "description": "Upgrade your home with our curated selection of premium home décor and kitchen essentials",
+    "ctaText": "Shop Home",
+    "ctaLink": "/category/home-kitchen"
+  },
+  {
+    "id": "4",
+    "title": "Fitness & Wellness - Transform Your Body",
+    "category": "Fitness",
+    "imageUrl": "https://images.pexels.com/photos/28731770/pexels-photo-28731770.jpeg",
+    "altText": "Fit woman lifting dumbbells in a vibrant, modern gym setting showing active lifestyle",
+    "description": "Achieve your fitness goals with our complete range of gym equipment and fitness accessories",
+    "ctaText": "Shop Fitness",
+    "ctaLink": "/category/fitness"
+  },
+  {
+    "id": "5",
+    "title": "Beauty & Skincare - Glow from Within",
+    "category": "Beauty",
+    "imageUrl": "https://images.pexels.com/photos/8015783/pexels-photo-8015783.jpeg",
+    "altText": "Minimalist beauty set with skincare bottles and facial roller on concrete background",
+    "description": "Discover premium skincare and beauty products for a radiant, healthy glow",
+    "ctaText": "Shop Beauty",
+    "ctaLink": "/category/beauty"
+  }
+]
