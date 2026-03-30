@@ -23,10 +23,14 @@ A fully functional e-commerce web application that closely replicates **Amazon I
 ### Product Detail Page
 ![Product Detail](screenshots/product-detail.png)
 
+### Related products
+![Product Detail](screenshots/related-products.png)
+
+
 ### Shopping Cart
 ![Cart](screenshots/cart.png)
 
-### Checkout Flow
+### Checkout Flow with slider
 ![Checkout](screenshots/checkout.png)
 
 ### Order Confirmation
@@ -43,6 +47,7 @@ A fully functional e-commerce web application that closely replicates **Amazon I
 
 ### Mobile Responsive View
 ![Mobile View](screenshots/mobile-view.png)
+![Mobile View](screenshots/mobile-view(1).png)
 
 ---
 
