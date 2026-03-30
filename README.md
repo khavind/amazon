@@ -32,6 +32,8 @@ A fully functional e-commerce web application that closely replicates **Amazon I
 
 ### Add Wishlist and remove Wishlist
 ![wishlist](screenshots/wishlist.png)
+
+
 ![wishlist](screenshots/wishlist1.png)
 
 
