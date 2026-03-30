@@ -206,6 +206,4 @@ This project is built for educational/demonstration purposes only. Amazon brandi
 
 ---
 
-## 👨‍💻 Author
 
-Built with ❤️ using [Lovable](https://lovable.dev)
