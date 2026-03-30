@@ -30,6 +30,11 @@ A fully functional e-commerce web application that closely replicates **Amazon I
 ### Shopping Cart
 ![Cart](screenshots/cart.png)
 
+### Add Wishlist and remove Wishlist
+![wishlist](screenshots/wishlist.png)
+![wishlist](screenshots/wishlist1.png)
+
+
 ### Checkout Flow with slider
 ![Checkout](screenshots/checkout.png)
 
