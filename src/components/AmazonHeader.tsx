@@ -2,7 +2,7 @@ import { Search, ShoppingCart, MapPin, ChevronDown, Menu, Globe, Heart } from "l
 import { Link, useNavigate } from "react-router-dom";
 import { useCart } from "@/context/CartContext";
 import { useWishlist } from "@/context/WishlistContext";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import amazonLogo from "@/assets/amazon-logo.png";
 import SideMenu from "./SideMenu";
 
@@ -23,20 +23,54 @@ const subNavItems = [
   { label: "Books", link: "/?category=Books" },
 ];
 
+const categories = ["All", "Electronics", "Fashion", "Home & Kitchen", "Books", "Fitness", "Beauty"];
+const languages = ["English", "हिन्दी", "ಕನ್ನಡ"];
+
 const AmazonHeader = () => {
   const { getCartCount } = useCart();
   const { getWishlistCount } = useWishlist();
   const navigate = useNavigate();
   const [searchQuery, setSearchQuery] = useState("");
   const [sideMenuOpen, setSideMenuOpen] = useState(false);
+  const [selectedCategory, setSelectedCategory] = useState("All");
+  const [selectedLanguage, setSelectedLanguage] = useState("English");
+  const [showCategoryDropdown, setShowCategoryDropdown] = useState(false);
+  const [showLanguageDropdown, setShowLanguageDropdown] = useState(false);
+  const categoryDropdownRef = useRef<HTMLDivElement>(null);
+  const languageDropdownRef = useRef<HTMLDivElement>(null);
 
   const user = JSON.parse(localStorage.getItem("amazon_user") || "null");
+
+  // Close dropdowns when clicking outside
+  useEffect(() => {
+    const handleClickOutside = (event: MouseEvent) => {
+      if (categoryDropdownRef.current && !categoryDropdownRef.current.contains(event.target as Node)) {
+        setShowCategoryDropdown(false);
+      }
+      if (languageDropdownRef.current && !languageDropdownRef.current.contains(event.target as Node)) {
+        setShowLanguageDropdown(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
 
   const handleSearch = (e: React.FormEvent) => {
     e.preventDefault();
     if (searchQuery.trim()) {
-      navigate(`/?search=${encodeURIComponent(searchQuery)}`);
+      navigate(`/?search=${encodeURIComponent(searchQuery)}&category=${selectedCategory === "All" ? "All" : selectedCategory}`);
     }
+  };
+
+  const handleCategorySelect = (category: string) => {
+    setSelectedCategory(category);
+    setShowCategoryDropdown(false);
+  };
+
+  const handleLanguageSelect = (language: string) => {
+    setSelectedLanguage(language);
+    setShowLanguageDropdown(false);
   };
 
   return (
@@ -58,10 +92,32 @@ const AmazonHeader = () => {
         </div>
 
         {/* Search */}
-        <form onSubmit={handleSearch} className="flex-1 flex h-10 rounded-md overflow-hidden">
-          <div className="hidden md:flex items-center bg-muted px-2 text-xs text-foreground rounded-l-md border-r border-border gap-0.5 cursor-pointer">
-            <span className="text-muted-foreground text-[12px]">All</span>
-            <ChevronDown size={12} className="text-muted-foreground" />
+        <form onSubmit={handleSearch} className="flex-1 flex h-10 rounded-md overflow-hidden relative">
+          <div ref={categoryDropdownRef} className="hidden md:flex items-center relative">
+            <button
+              type="button"
+              onClick={() => setShowCategoryDropdown(!showCategoryDropdown)}
+              className="bg-muted px-2 text-xs text-foreground border-r border-border gap-0.5 cursor-pointer flex items-center gap-1 h-full hover:bg-muted/80"
+            >
+              <span className="text-muted-foreground text-[12px]">{selectedCategory}</span>
+              <ChevronDown size={12} className="text-muted-foreground" />
+            </button>
+            {showCategoryDropdown && (
+              <div className="absolute top-full left-0 bg-card border border-border rounded shadow-lg z-50 min-w-[150px] mt-0">
+                {categories.map((cat) => (
+                  <button
+                    key={cat}
+                    type="button"
+                    onClick={() => handleCategorySelect(cat)}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-muted transition-colors ${
+                      selectedCategory === cat ? "font-bold text-amazon-link" : "text-foreground"
+                    }`}
+                  >
+                    {cat}
+                  </button>
+                ))}
+              </div>
+            )}
           </div>
           <input
             type="text"
@@ -76,10 +132,35 @@ const AmazonHeader = () => {
         </form>
 
         {/* Language */}
-        <div className="hidden lg:flex items-center gap-1 text-secondary-foreground text-xs px-2 py-1 border border-transparent hover:border-secondary-foreground/50 rounded cursor-pointer">
-          <Globe size={16} />
-          <span className="font-bold text-sm">EN</span>
-          <ChevronDown size={10} />
+        <div
+          ref={languageDropdownRef}
+          className="hidden lg:flex items-center relative"
+        >
+          <button
+            type="button"
+            onClick={() => setShowLanguageDropdown(!showLanguageDropdown)}
+            className="flex items-center gap-1 text-secondary-foreground text-xs px-2 py-1 border border-transparent hover:border-secondary-foreground/50 rounded cursor-pointer"
+          >
+            <Globe size={16} />
+            <span className="font-bold text-sm">{selectedLanguage.substring(0, 2).toUpperCase()}</span>
+            <ChevronDown size={10} />
+          </button>
+          {showLanguageDropdown && (
+            <div className="absolute top-full right-0 bg-card border border-border rounded shadow-lg z-50 min-w-[150px] mt-1">
+              {languages.map((lang) => (
+                <button
+                  key={lang}
+                  type="button"
+                  onClick={() => handleLanguageSelect(lang)}
+                  className={`w-full text-left px-4 py-2 text-sm hover:bg-muted transition-colors ${
+                    selectedLanguage === lang ? "font-bold text-amazon-link" : "text-foreground"
+                  }`}
+                >
+                  {lang}
+                </button>
+              ))}
+            </div>
+          )}
         </div>
 
         {/* Account */}
